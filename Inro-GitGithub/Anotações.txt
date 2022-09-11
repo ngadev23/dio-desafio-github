@@ -1,1 +1,121 @@
-desafio github
+COMANDOS
+
+got init - inicia o GIT na pasta que estou.
+
+git status - diz o status do arquivo da pasta em relação ao GIT. 
+
+git add arquivo - armazena o arquivo na "área de transferência" (stage area). 
+
+git add . - armazena todos os arquivo da pasta na "área de transferência" (stage area). 
+
+git add -u - adiciona na stage area todos os arquivos que já foram mexidos pelo GIT. 
+
+git commit -m "msg de commit" - passa os arquivos do stage area para meu git. 
+
+git log - mostra o histórico de mudanças.
+
+git config --list (ou - l) - lista as variáveis configuradas no git
+
+git config --list -- local (ou - l) - lista as variáveis configuradas no git na pasta.
+
+git config --list -- global - lista as variáveis configuradas no git de forma global.
+
+git config --global user.name nome - configurar o nome do usuário.
+
+git config --global user.email email - configurar o e-mail do usuário.
+
+git config --global core.editor bla - configurar o editor padrão.
+
+Se mover para um commit anterior
+
+git checkout (hash)
+
+Voltar para o último commit
+git checkout master
+
+git diff - mostra o que mudou de um commit para o atual commit.
+
+git log -p - mostra o log detalhado.
+
+git log -p -n - exibe os últimos n commits.
+
+git log --stat - mostra os arquivos modificados.
+
+git log --graph - mostra log com "gráfico".
+
+git log --oneline - mostrar log em 1 linha.
+
+git log --author=user - mostrar log só do user selecionado.
+
+git log --grep="palavra" - log que tiver palavra selecionada.
+
+git checkout - b nome_da_branch - cria uma nova branch com o nome nome_da_branch.
+
+git branch ver todas as branches (ramificações).
+
+git branch -v - mostrar o último commit na branch atual.
+
+git merge nome_da_branch - incorpora os commits da branch na master.
+
+git commit --amend - alterar mensagem de commit. E se tiver alterado o arquivo, altera no mesmo commit.
+
+git rebase -i HEAD~(número de commit) - abre para alterar histórico e juntar commits.
+
+git rm -r arquivo/dir - remove o arquivo do git e da pasta.
+
+git rm -r --cached arquivo/dir - remove do git, mas mantém no computador.
+
+Clonar um repositório
+- criar uma pasta no pc
+- copiar o HTTP gerado no github
+- git clone (link)
+
+git config --global init.defaultBranch nome(preferência main) - configura a branch principal para main.
+
+git remote add (nome) (caminho Do Repositório) - configura local o caminho de pull e push) 
+
+git pull (nome) (branch) - puxa do repositório configurado para a pasta.
+
+git push --set-upstream (nome) - empurra os commits para o repositório remoto.
+
+git remote set-url nome (URL nova) - altera a URL do diretório remoto.
+
+git remote rename old_name new_name - altera o nome.
+
+git remote rm nome
+
+git reset - tira os arquivos do staging area.
+
+git reverse HEAD - Desfaz o último commit.
+
+git branch -a - mostra as branches que estão no remoto tb.
+
+git branch -d nome_da_branch - apaga a branch local.
+
+git branch -m old_name novo_nome - renomeia a branch.
+
+git checkout --orphan (nome) - cria uma branch desligada da principal.
+
+Criar chave e conexão ssh
+
+No git bash ou terminal linux
+ssh-keygen -t ed25519 -C email
+
+cd /home... /.ssh/
+cat id25519.pub
+
+No git hub em ssh...
+Colocar o conteúdo de id25519.pub
+
+Bash/terminal
+*eval $(ssh-agent -s) *
+
+*ssh-add id25519
+
+
+Para testar..
+git clone ssh_path
+
+git config --global ini.defaultBranch main
+
+master para main
